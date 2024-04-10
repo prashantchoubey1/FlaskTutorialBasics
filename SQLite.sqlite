@@ -1,0 +1,4 @@
+CREATE TABLE employees (
+    employee_id INTEGER PRIMARY KEY,
+    employee_name TEXT
+);

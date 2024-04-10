@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+</head>
+<body>
+
+<h2>Simple Form</h2>
+
+<!-- Static text -->
+<p>This is a simple HTML form.</p>
+
+<form action="/submit_form" method="post">
+    <label for="employee_id">Employee ID:</label><br>
+    <input type="text" id="employee_id" name="employee_id"><br>
+    <label for="employee_name">Employee Name:</label><br>
+    <input type="text" id="employee_name" name="employee_name"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<!-- Display information -->
+{% if employee_id and employee_name %}
+<p>Submitted Employee ID: {{ employee_id }}</p>
+<p>Submitted Employee Name: {{ employee_name }}</p>
+<p>Submitted query: {{ sql_query }}</p>
+<p>Submitted status: {{ status }}</p>
+{% endif %}
+
+</body>
+</html>
